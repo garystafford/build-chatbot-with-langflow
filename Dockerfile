@@ -1,6 +1,6 @@
-# Langflow on AWS
+# Langflow
 # Author: Gary A. Stafford
-# Date: 2023-07-29
+# Date: 2023-07-31
 # docker build -t garystafford/langflow:0.3.3 .
 
 FROM python:3.10-slim
@@ -32,7 +32,7 @@ RUN set -ex \
     && apt-get install -y \
     gcc g++ git make \
     # install dependencies
-    && pip install -r requirements.txt -U --user \
+    && langflow==0.3.3 -U --user \
     # clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
