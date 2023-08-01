@@ -16,9 +16,10 @@ log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 logging.basicConfig(format=log_format, stream=sys.stdout, level=logging.INFO)
 
 BASE_API_URL = "http://localhost:7860/api/v1/process"
+BASE_AVATAR_URL = "https://raw.githubusercontent.com/garystafford/build-chatbot-with-langflow/main/static"
+
+# ***** REPLACE THE FOLLOWING LINES OF CODE *****
 FLOW_ID = "cd2c3ce5-0488-4f4e-86b1-2f3c92216fc5"
-# You can tweak the flow by adding a tweaks dictionary
-# e.g {"OpenAI-XXXXX": {"model_name": "gpt-4"}}
 TWEAKS = {
     "Chroma-ONPt3": {},
     "ConversationalRetrievalChain-dQ4f5": {},
@@ -26,9 +27,7 @@ TWEAKS = {
     "HuggingFaceEmbeddings-xhPRo": {},
     "ChatOpenAI-UERtz": {},
 }
-BASE_AVATAR_URL = (
-    "https://raw.githubusercontent.com/garystafford-aws/static-assets/main/static"
-)
+# ************************************************
 
 
 def main():
